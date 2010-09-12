@@ -9,6 +9,8 @@ Pigeon module also comes with logger plugin for Kohana.
 	$ git submodule add git://github.com/loonies/kohana-pigeon.git modules/pigeon
 	$ cd modules/pigeon
 	$ git submodule update --init
+	$ cd ../..
+	$ git submodule update --init
 
 ## Configuration
 
