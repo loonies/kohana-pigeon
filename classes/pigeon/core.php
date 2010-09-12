@@ -62,11 +62,11 @@ abstract class Pigeon_Core {
 			$group = Pigeon::$default;
 		}
 
-		// Make sure SwiftMailer is loaded
-		Pigeon::load();
-
 		if ( ! isset(Pigeon::$_instances[$group]))
 		{
+			// Make sure SwiftMailer is loaded
+			Pigeon::load();
+
 			// Create a new transport instance
 			$transport = Pigeon_Transport::factory($group);
 
