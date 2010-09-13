@@ -47,13 +47,13 @@ abstract class Pigeon_Core_Transport_Smtp extends Pigeon_Transport {
 		if (isset($options['username']))
 		{
 			// Set username
-			$transport->setUsername('username');
+			$transport->setUsername($options['username']);
 		}
 
 		if (isset($options['password']))
 		{
 			// Set password
-			$transport->setPassword('password');
+			$transport->setPassword($options['password']);
 		}
 
 		return $transport;
