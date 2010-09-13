@@ -3,7 +3,7 @@
  * Logs to the Kohana logger
  *
  * @package    Pigeon
- * @category   Plugin
+ * @category   Plugins
  * @author     Miodrag Tokić <mtokic@gmail.com>
  * @copyright  (c) 2010 Miodrag Tokić
  * @license    MIT
