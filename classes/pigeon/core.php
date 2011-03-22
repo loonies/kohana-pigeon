@@ -34,8 +34,11 @@ abstract class Pigeon_Core {
 
 		if ( ! class_exists('Swift_Mailer', FALSE))
 		{
+			if (($path = Kohana::find_file('vendor', 'swiftmailer/lib/swift_required')) === FALSE)
+				throw new Kohana_Exception('SwiftMailer could not be found');
+
 			// Load SwiftMailer
-			require_once Kohana::find_file('vendor', 'swiftmailer/lib/swift_required');
+			require $path;
 		}
 
 		// Sets the default charset
