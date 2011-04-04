@@ -13,7 +13,7 @@ abstract class Pigeon_Core_Plugins_Loggers_Kohana implements Swift_Plugins_Logge
 	public function add($entry)
 	{
 		// Add a log entry
-		Kohana::$log->add(Kohana::DEBUG, $entry);
+		Kohana::$log->add(Log::DEBUG, $entry);
 	}
 
 	public function clear()
