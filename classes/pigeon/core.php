@@ -5,10 +5,13 @@
  * @package    Pigeon
  * @category   Base
  * @author     Miodrag Tokić <mtokic@gmail.com>
- * @copyright  (c) 2010 Miodrag Tokić
+ * @copyright  (c) 2010-2011 Miodrag Tokić
  * @license    MIT
  */
 abstract class Pigeon_Core {
+
+	// Current version
+	const VERSION = '0.2';
 
 	// Default mailer group
 	public static $default = 'default';
@@ -34,8 +37,11 @@ abstract class Pigeon_Core {
 
 		if ( ! class_exists('Swift_Mailer', FALSE))
 		{
+			if (($path = Kohana::find_file('vendor', 'swiftmailer/lib/swift_required')) === FALSE)
+				throw new Kohana_Exception('SwiftMailer could not be found');
+
 			// Load SwiftMailer
-			require_once Kohana::find_file('vendor', 'swiftmailer/lib/swift_required');
+			require $path;
 		}
 
 		// Sets the default charset
