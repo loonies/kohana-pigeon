@@ -11,7 +11,7 @@
 abstract class Pigeon_Core {
 
 	// Current version
-	const VERSION = '0.1';
+	const VERSION = '0.2';
 
 	// Default mailer group
 	public static $default = 'default';
