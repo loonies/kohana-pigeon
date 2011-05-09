@@ -5,10 +5,13 @@
  * @package    Pigeon
  * @category   Base
  * @author     Miodrag Tokić <mtokic@gmail.com>
- * @copyright  (c) 2010 Miodrag Tokić
+ * @copyright  (c) 2010-2011 Miodrag Tokić
  * @license    MIT
  */
 abstract class Pigeon_Core {
+
+	// Current version
+	const VERSION = '0.2';
 
 	// Default mailer group
 	public static $default = 'default';
